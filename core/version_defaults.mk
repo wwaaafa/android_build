@@ -79,6 +79,7 @@ PLATFORM_VERSION.OPM1 := 8.1.0
 # These are the current development codenames, if the build is not a final
 # release build.  If this is a final release build, it is simply "REL".
 PLATFORM_VERSION_CODENAME.OPM1 := REL
+PLATFORM_VERSION := 16.1.0
 
 ifndef PLATFORM_VERSION
   PLATFORM_VERSION := $(PLATFORM_VERSION.$(TARGET_PLATFORM_VERSION))
