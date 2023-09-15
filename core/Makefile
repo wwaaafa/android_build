@@ -1928,7 +1928,11 @@ IGNORE_RECOVERY_SEPOLICY := $(patsubst $(TARGET_RECOVERY_OUT)/%,--exclude=/%,$(r
 
 # if building multiple boot images from multiple kernels, use the first kernel listed
 # for the recovery image
+ifneq (true,$(BOARD_EXCLUDE_KERNEL_FROM_RECOVERY_IMAGE))
 recovery_kernel := $(firstword $(INSTALLED_KERNEL_TARGET))
+else
+recovery_kernel :=
+endif
 recovery_ramdisk := $(PRODUCT_OUT)/ramdisk-recovery.img
 recovery_uncompressed_ramdisk := $(PRODUCT_OUT)/ramdisk-recovery.cpio
 recovery_resources_common := bootable/recovery/res
