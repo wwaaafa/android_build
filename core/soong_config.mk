@@ -11,8 +11,6 @@ endif
 
 include $(BUILD_SYSTEM)/dex_preopt_config.mk
 
-include vendor/twrp/soong/makevars.mk
-
 ifeq ($(WRITE_SOONG_VARIABLES),true)
 
 # Create soong.variables with copies of makefile settings.  Runs every build,
