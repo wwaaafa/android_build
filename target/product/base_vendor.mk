@@ -25,7 +25,6 @@ PRODUCT_PACKAGES += \
     linker.recovery \
     otacerts.recovery \
     recovery \
-    servicemanager.recovery \
     shell_and_utilities_recovery \
     watchdogd.recovery \
 
